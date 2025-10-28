@@ -1,6 +1,6 @@
 # 🖼️ Image Analysis — C++ (Qt + OpenCV)
 
-This repository contains my TP1 project for the **Image Analysis / Image Processing** course at **Université Claude Bernard Lyon 1**.  
+This repository contains my project for the **Image Analysis / Image Processing** course at **Université Claude Bernard Lyon 1**.  
 It provides both a **text-based console UI** and a **Qt GUI** to run custom implementations of classic image-processing operations and compare them against **OpenCV**.
 
 You can also check ``` rapport.md ```
