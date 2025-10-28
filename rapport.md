@@ -1,4 +1,4 @@
-## Rapport TP1 : Traitement d'image
+## Rapport : Traitement d'image
 
 ### Équipe
 - COTTIER ALEXANDRE
@@ -7,20 +7,19 @@
 ---
 
 ### Annexes
-1. Code source : disponible sur https://forge.univ-lyon1.fr/p2018147/analyse.
-2. Images de test : fournies dans le dossier "donnee" et "donnee2".
-3. Résultats finaux : disponibles dans le dossier "resultat".
-4. Pour compiler, il suffit de se rendre dans le dossier build et entrer `make`, cela devrait compiler tous les fichiers un par un en plus des interfaces UI (texte) et Qt (graphique) qui ont réutilisé les fonctions qu'on a au préalable faites dans d'autres fichiers de base.
+1. Images de test : fournies dans le dossier "donnee" et "donnee2".
+2. Résultats finaux : disponibles dans le dossier "resultat".
+3. Pour compiler, il suffit de se rendre dans le dossier build et entrer `make`, cela devrait compiler tous les fichiers un par un en plus des interfaces UI (texte) et Qt (graphique) qui ont réutilisé les fonctions qu'on a au préalable faites dans d'autres fichiers de base.
 
-5. Instructions pour exécuter le projet :
+4. Instructions pour exécuter le projet :
    - Aller dans le dossier `build/`
    - Exécuter d'abord `cmake ..`
    - Puis compiler avec `make`.
    - Exécuter avec `./filtrage_median`, `./convolution`, etc.
    - Pour avoir les interface texte (Ui) : `./ui_module` et interface graphique (Qt) : `./test_module` 
-6. Dans l'interface texte, il faut dès le départ faire `load image` et choisir l'image voulue, elles sont stockées dans : `../donnee/*.png` ou `../donnee2/*.png`.
+5. Dans l'interface texte, il faut dès le départ faire `load image` et choisir l'image voulue, elles sont stockées dans : `../donnee/*.png` ou `../donnee2/*.png`.
 Idem pour l'interface Qt mais ici on choisi a la main gràce a l'interface graphique.
-7. Dans l'interface Qt (test_module), pour les options qui ne nécéssites pas un kernel, on utilise l'extra parameter !
+6. Dans l'interface Qt (test_module), pour les options qui ne nécéssites pas un kernel, on utilise l'extra parameter !
 
 **/!\ Pour executer Qt il faut l'avoir d'installer sur sa machine !**
 
@@ -113,8 +112,8 @@ Idem pour l'interface Qt mais ici on choisi a la main gràce a l'interface graph
 - **Image originale vs filtrage médian** :
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-    <img src="TP1/donnee/Autre.png" alt="Description de l'image" width="283" height="373.5">
-    <img src="TP1/resultat/resultat_filtrage_median.png" alt="Filtrage médian" width="283" height="373.5">
+    <img src="code/donnee/Autre.png" alt="Description de l'image" width="283" height="373.5">
+    <img src="code/resultat/resultat_filtrage_median.png" alt="Filtrage médian" width="283" height="373.5">
 </div>
 
 #### Convolution
@@ -122,27 +121,27 @@ Idem pour l'interface Qt mais ici on choisi a la main gràce a l'interface graph
 1. **Filtrage moyenneur** :
    - **Manuel et Histogrammes** :
    <div style="display: flex; gap: 10px; align-items: center;">
-      <img src="TP1/resultat/result_mean_manual.png" alt="Moyenneur Manuel" width="283" height="373.5">
-      <img src="TP1/resultat/hist_mean_manual.png" alt="Histogramme Manuel" width="256" height="200">
-      <img src="TP1/resultat/hist_mean_opencv.png" alt="Histogramme OpenCV" width="256" height="200">
+      <img src="code/resultat/result_mean_manual.png" alt="Moyenneur Manuel" width="283" height="373.5">
+      <img src="code/resultat/hist_mean_manual.png" alt="Histogramme Manuel" width="256" height="200">
+      <img src="code/resultat/hist_mean_opencv.png" alt="Histogramme OpenCV" width="256" height="200">
    </div>
    - **Comparaison des histogrammes** : Similarité des histogrammes (moyenne) : 0.945531
 <br><br>
 2. **Filtrage gaussien** :
    - **Manuel et Histogrammes** :
    <div style="display: flex; gap: 10px; align-items: center;">
-      <img src="TP1/resultat/result_gaussian_manual.png" alt="Gaussien Manuel" width="283" height="373.5">
-      <img src="TP1/resultat/hist_gaussian_manual.png" alt="Histogramme Gaussien Manuel" width="256" height="200">
-      <img src="TP1/resultat/hist_gaussian_opencv.png" alt="Histogramme Gaussien OpenCV" width="256" height="200">
+      <img src="code/resultat/result_gaussian_manual.png" alt="Gaussien Manuel" width="283" height="373.5">
+      <img src="code/resultat/hist_gaussian_manual.png" alt="Histogramme Gaussien Manuel" width="256" height="200">
+      <img src="code/resultat/hist_gaussian_opencv.png" alt="Histogramme Gaussien OpenCV" width="256" height="200">
    </div>
    - **Comparaison des histogrammes** : Similarité des histogrammes (gaussien) : 0.972912
 
 3. **Filtrage Sobel** :
    - **Manuel et Histogrammes** :
    <div style="display: flex; gap: 10px; align-items: center;">
-      <img src="TP1/resultat/result_sobel_manual.png" alt="Sobel Manuel" width="283" height="373.5">
-      <img src="TP1/resultat/hist_sobel_manual.png" alt="Histogramme Sobel Manuel" width="256" height="200">
-      <img src="TP1/resultat/hist_sobel_opencv.png" alt="Histogramme Sobel OpenCV" width="256" height="200">
+      <img src="code/resultat/result_sobel_manual.png" alt="Sobel Manuel" width="283" height="373.5">
+      <img src="code/resultat/hist_sobel_manual.png" alt="Histogramme Sobel Manuel" width="256" height="200">
+      <img src="code/resultat/hist_sobel_opencv.png" alt="Histogramme Sobel OpenCV" width="256" height="200">
    </div>
    - **Comparaison des histogrammes** : Similarité des histogrammes (sobel) : 0.999997
 
@@ -152,44 +151,44 @@ Idem pour l'interface Qt mais ici on choisi a la main gràce a l'interface graph
 
 1. **Original image et Histogramme** :
    <div style="display: flex; gap: 10px; align-items: center;">
-      <img src="TP1/resultat/original_image.png" alt="Image originale" width="283" height="373.5">
-      <img src="TP1/resultat/image-3.png" alt="Histogramme original" width="126" height="218.5">
+      <img src="code/resultat/original_image.png" alt="Image originale" width="283" height="373.5">
+      <img src="code/resultat/image-3.png" alt="Histogramme original" width="126" height="218.5">
    </div>
 
 2. **Stretched image, Histogramme et LUT** :
    <div style="display: flex; gap: 10px; align-items: center;">
-      <img src="TP1/resultat/stretched_image.png" alt="Image étirée" width="283" height="373.5">
-      <img src="TP1/resultat/image-1.png" alt="Histogramme étiré" width="126" height="218.5">
-      <img src="TP1/resultat/image-5.png" alt="LUT étiré" width="126" height="218.5">
+      <img src="code/resultat/stretched_image.png" alt="Image étirée" width="283" height="373.5">
+      <img src="code/resultat/image-1.png" alt="Histogramme étiré" width="126" height="218.5">
+      <img src="code/resultat/image-5.png" alt="LUT étiré" width="126" height="218.5">
    </div>
 <br><br><br><br><br><br><br><br><br><br>
 
 3. **Equalization image, Histogramme et LUT** :
    <div style="display: flex; gap: 10px; align-items: center;">
-      <img src="TP1/resultat/image-6.png" alt="Image égalisée" width="283" height="373.5">
-      <img src="TP1/resultat/image-2.png" alt="Histogramme égalisé" width="126" height="218.5">
-      <img src="TP1/resultat/image-4.png" alt="LUT égalisé" width="126" height="218.5">
+      <img src="code/resultat/image-6.png" alt="Image égalisée" width="283" height="373.5">
+      <img src="code/resultat/image-2.png" alt="Histogramme égalisé" width="126" height="218.5">
+      <img src="code/resultat/image-4.png" alt="LUT égalisé" width="126" height="218.5">
    </div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 #### Transformations géométriques (bonus)
 - **Zoom, réduction et rotation appliqués avec succès (manuel).**
    1. **Zoom at one point (au centre avec scale 2)**
-   - <img src="TP1/resultat/zoomed_at_center.png" alt="Zoom au centre x2" width="283" height="373.5">
+   - <img src="code/resultat/zoomed_at_center.png" alt="Zoom au centre x2" width="283" height="373.5">
 
    2. **Reduced avec scale 0.5**
-   - <img src="TP1/resultat/reduced_image.png" alt="Réduction x0.5" width="141,5" height="186,75">
+   - <img src="code/resultat/reduced_image.png" alt="Réduction x0.5" width="141,5" height="186,75">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
    3. **Rotated avec degré de 45**
-   - <img src="TP1/resultat/rotated_image.png" alt="Rotation 45°" width="283" height="373.5">
+   - <img src="code/resultat/rotated_image.png" alt="Rotation 45°" width="283" height="373.5">
 
    4. **Flipped - horizontally**
-   - <img src="TP1/resultat/flipped_image.png" alt="Image retournée horizontalement" width="283" height="373.5">
+   - <img src="code/resultat/flipped_image.png" alt="Image retournée horizontalement" width="283" height="373.5">
    <br><br><br><br><br><br>
 
    5. **Zoom avec scale 2**
-   - ![alt text](TP1/resultat/zoomed_image.png)
+   - ![alt text](code/resultat/zoomed_image.png)
 
 
 ---
